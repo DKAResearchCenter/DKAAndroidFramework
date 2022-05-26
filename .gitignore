@@ -2,3 +2,4 @@
 /.gradle/
 /library/build/
 /library/build/intermediates/javac/debug/classes/
+/.idea/

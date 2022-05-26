@@ -13,6 +13,7 @@ abstract class DKAApplication : Application() {
     private lateinit var mFirebaseAnalytics : FirebaseAnalytics
     private lateinit var i : Intent
 
+    
     override fun attachBaseContext(base: Context?) {
         MultiDex.install(this)
         super.attachBaseContext(base)
