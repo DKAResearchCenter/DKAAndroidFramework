@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.dkaresearchcenter.dkaframework">
+          package="com.yovanggaanandhika.dkaframework">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -50,30 +50,30 @@
                 android:value="true"/>
 
 
-        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Auth.Component.View.DKAAuthLogin"
+        <activity android:name="com.yovanggaanandhika.dkaframework.Functions.Auth.Component.View.DKAAuthLogin"
                   android:exported="true"
                   android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
                   tools:ignore="InnerclassSeparator"/>
 
-        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.MessageManage.DKAMessageManage"
+        <activity android:name="com.yovanggaanandhika.dkaframework.Functions.Message.Component.MessageManage.DKAMessageManage"
                   android:exported="true"
                   android:launchMode="singleTop"
                   android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
                   tools:ignore="InnerclassSeparator"/>
 
-        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.View.DKAMsgScreenCall"
+        <activity android:name="com.yovanggaanandhika.dkaframework.Functions.Message.Component.View.DKAMsgScreenCall"
                   android:exported="true"
                   android:launchMode="singleTop"
                   android:theme="@style/DKA.Themes.NoActionBar"
                   tools:ignore="InnerclassSeparator"/>
 
-        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.View.DKAMsgScreenRoomChat"
+        <activity android:name="com.yovanggaanandhika.dkaframework.Functions.Message.Component.View.DKAMsgScreenRoomChat"
                   android:exported="true"
                   android:launchMode="singleTop"
                   android:theme="@style/DKA.Themes.NoActionBar"
                   tools:ignore="InnerclassSeparator"/>
 
-        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Auth.Component.AuthManage.DKAAuthManage"
+        <activity android:name="com.yovanggaanandhika.dkaframework.Functions.Auth.Component.AuthManage.DKAAuthManage"
                   android:exported="true"
                   android:launchMode="singleTop"
                   android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
@@ -93,7 +93,7 @@
         </provider>-->
 
         <service
-                android:name="com.dkaresearchcenter.dkaframework.Service.Component.Auth.DKAAuthentificatorService"
+                android:name="com.yovanggaanandhika.dkaframework.Service.Component.Auth.DKAAuthentificatorService"
                 android:exported="true"
                 tools:ignore="ExportedService,InnerclassSeparator">
             <intent-filter>
@@ -104,7 +104,7 @@
                     android:resource="@xml/dka_auth_accountauthenticator"/>
         </service>
         <service
-                android:name="com.dkaresearchcenter.dkaframework.Service.Component.Sync.DKAAuthentificatorSyncService"
+                android:name="com.yovanggaanandhika.dkaframework.Service.Component.Sync.DKAAuthentificatorSyncService"
                 android:exported="true"
                 android:process=":sync"
                 tools:ignore="ExportedService,InnerclassSeparator">
@@ -120,7 +120,7 @@
                 android:exported="true"
                 android:label="Layanan DKA"
                 android:icon="@mipmap/ic_launcher"
-                android:name="com.dkaresearchcenter.dkaframework.Service.DKAService"
+                android:name="com.yovanggaanandhika.dkaframework.Service.DKAService"
                 tools:ignore="ExportedService">
 
         </service>
