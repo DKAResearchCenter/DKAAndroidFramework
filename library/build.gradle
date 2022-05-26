@@ -1,162 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-
-
-/*
-apply {
-    plugin 'com.android.library'
-    plugin 'kotlin-android'
-    plugin 'kotlin-kapt'
-    plugin 'maven-publish'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
 }
-*/
-
-apply plugin : 'com.android.library'
-apply plugin : 'kotlin-android'
-apply plugin : 'kotlin-kapt'
-apply plugin: "com.vanniktech.maven.publish"
-
-
-// Because the components are created only during the afterEvaluate phase, you must
-// configure your publications using the afterEvaluate() lifecycle method.
-
-/*publishing {
-    repositories {
-        maven {
-            def releasesRepoUrl = "$buildDir/repos/releases"
-            def snapshotsRepoUrl = "$buildDir/repos/snapshots"
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-        }
-    }
-}*/
-
-/*mavenPublish {
-    // ...
-    nexus {
-        baseUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/" // defaults to "https://oss.sonatype.org/service/local/"
-        //stagingProfile = "net.example" // defaults to the SONATYPE_STAGING_PROFILE Gradle property or the GROUP Gradle Property if not set
-        repositoryUsername = "yovangga" // defaults to the mavenCentralRepositoryUsername Gradle Property
-        repositoryPassword = "Cyberhack2010" // defaults to the mavenCentralRepositoryPassword Gradle Property
-    }
-}*/
-
-/*afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components.release
-
-                // You can then customize attributes of the publication as shown below.
-                groupId = 'com.dkaresearchcenter.dkaframwork'
-                artifactId = 'core'
-                version = '1.0.0'
-            }
-            // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-
-                groupId = 'com.dkaresearchcenter.dkaframwork'
-                artifactId = 'core-debug'
-                version = '1.0.0'
-            }
-        }
-    }
-}*/
-/*signing {
-    sign configurations.archives
-}*/
-group = "com.dkaresearchcenter.dkaframework"
-archivesBaseName = "core"
-version = "1.0.0"
-
-/*uploadArchives {
-    repositories {
-        mavenDeployer {
-            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-
-            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
-
-            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
-            }
-
-            pom.project {
-                name 'DKA Framework'
-                packaging 'jar'
-                // optionally artifactId can be defined here
-                description 'A multi Preter Framework'
-                url 'https://github.com/DKAResearchCenter/DKAJSFramework'
-
-                scm {
-                    connection 'scm:git@github.com:DKAResearchCenter/DKAJSFramework.git'
-                    developerConnection 'scm:git@github.com:DKAResearchCenter/DKAJSFramework.git'
-                    url 'https://github.com/DKAResearchCenter/DKAJSFramework'
-                }
-
-                licenses {
-                    license {
-                        name 'The Apache License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id 'yovangga'
-                        name 'Yovangga Anandhika'
-                        email 'dhikaprivate@gmail.com'
-                    }
-                }
-            }
-        }
-    }
-}*/
-
-/*afterEvaluate {
-    publishing {
-        repositories {
-            maven {
-                name "core"
-                url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-                credentials {
-                    username ossrhUsername
-                    password ossrhPassword
-                }
-            }
-        }
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components.release
-
-                // You can then customize attributes of the publication as shown below.
-                groupId = 'com.dkaresearchcenter.dkaframework'
-                artifactId = 'final'
-                version = '1.0'
-            }
-            // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-
-                groupId = 'com.dkaresearchcenter.dkaframework'
-                artifactId = 'final-debug'
-                version = '1.0'
-            }
-        }
-    }
-}*/
-
 
 android {
-    compileSdkVersion 32
 
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+        // ...
+    }
+
+    compileSdkVersion 32
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
     }
@@ -300,5 +160,15 @@ dependencies {
 
 }
 
-//apply plugin: 'com.google.firebase.crashlytics'
-/*apply plugin: 'com.google.gms.google-services'*/
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = "com.dkaresearchcenter"
+                artifactId = "dkaframework"
+                version = "1.0.0"
+            }
+        }
+    }
+}

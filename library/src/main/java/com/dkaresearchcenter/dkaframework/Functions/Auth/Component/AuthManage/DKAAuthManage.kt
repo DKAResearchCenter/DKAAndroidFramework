@@ -21,6 +21,7 @@ import com.dkaresearchcenter.dkaframework.Functions.Message.Component.MessageMan
 import com.dkaresearchcenter.dkaframework.R
 import com.dkaresearchcenter.dkaframework.databinding.UiLayoutFunctionAuthManagescreenBinding
 
+@Suppress("DEPRECATION")
 class DKAAuthManage : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     private var i : Intent = Intent()

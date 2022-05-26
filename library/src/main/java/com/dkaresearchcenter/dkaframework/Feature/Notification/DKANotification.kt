@@ -144,7 +144,7 @@ open class DKANotification : DKAMaster<Notification>(), DKAOptions.Notification.
         mStyle = true
         mStyleType = NotificationCompat.BigPictureStyle()
         if (mBitmap != null) (mStyleType as NotificationCompat.BigPictureStyle).bigPicture(mBitmap)
-        if (mBigLargeIcon != null) (mStyleType as NotificationCompat.BigPictureStyle).bigLargeIcon(mBigLargeIcon) ?: (mStyleType as NotificationCompat.BigPictureStyle).bigLargeIcon(mBigLargeIcon)
+        if (mBigLargeIcon != null) (mStyleType as NotificationCompat.BigPictureStyle).bigLargeIcon(mBigLargeIcon)
 
         return this
     }
