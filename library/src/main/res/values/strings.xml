@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name" translatable="false">DKA Framework</string>
+    <string name="app_host" translatable="false">http://56bd49edcce6.ngrok.io</string>
+    <string name="account_name" translatable="false">DKA Account</string>
+
+    <string name="dka_account_type">account.dka</string>
+    <string name="sync_name">Data User</string>
+
+    <string name="dka_server_client_id" translatable="false">
+        343130831896-cti0nnt9menc3bb4cktadkbs7b65nqi2.apps.googleusercontent.com
+    </string>
+    <string name="dka_facebook_app_id" translatable="false">396229921307706</string>
+    <string name="dka_fb_login_protocol_scheme" translatable="false">fb396229921307706</string>
+    <string name="dka_banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="dka_config_firebase_project_id">dka-framework</string>
+    <string name="dka_config_firebase_application_id">1:467876296298:android:6d44ed8a36ba842570bc13</string>
+    <string name="dka_config_firebase_api_key">AIzaSyADSnCR-uZwURqgEVfXCI2chLYqqF52s6M</string>
+
+    <string name="dka_ui_activity_authentification_authscreen_tablogin">MASUK</string>
+    <string name="dka_ui_activity_authentification_authscreen_tabregister">BUAT AKUN</string>
+    <string name="dka_ui_activity_authentification_authscreen_buttonlogin">IDENTIFIKASI</string>
+    <string name="dka_ui_activity_authentification_authscreen_buttonregister">REGISTRASI</string>
+    <string name="dka_ui_activity_authentification_authscreen_welcometitle">Gunakan Sebuah Akun</string>
+    <string name="dka_ui_activity_authentification_authscreen_welcomedesc">Untuk Melanjutkan Ke</string>
+
+    <string name="dka_ui_activity_authentification_authscreen_welcometitle_reg">Ciptakan Sebuah Akun</string>
+    <string name="dka_ui_activity_authentification_authscreen_welcomedesc_reg">Untuk Menggunakan Layanan Dari</string>
+    <string name="dka_ui_activity_authentification_authscreen_welcometitle_desc">
+        Kami menyadari betapa penting dan vitalnya hal yang berkaitan dengan privasi. Kami selalu berupaya dan
+        meningkatkan kualitas keamanan dan layanan dari hari ke hari.
+        sehingga kami mengutarakan ke dalam aturan kebijakan privasi pada website dan aplikasi kami. Gunakan sebuah akun
+        untuk mendapatkan pengalaman tidak terbatas
+    </string>
+
+    <string name="dka_ui_activity_authentification_authscreen_welcometitle_datalogin">Tetapkan Data Login</string>
+    <string name="dka_ui_activity_authentification_authscreen_welcomedesc_datalogin">Ini Adalah Data Yang Anda Gunakan
+        Saat Login
+    </string>
+
+    <string name="dka_ui_activity_authentification_authscreen_formusernamehint">Email / User Akun</string>
+    <string name="dka_ui_activity_authentification_authscreen_formpasswordhint">Kata Sandi Akun</string>
+    <string name="dka_ui_activity_authentification_authscreen_anothermethodtext">Cara Lain Untuk Masuk</string>
+    <string name="dka_ui_activity_authentification_authscreen_googlelogin">Masuk Dengan Akun Google</string>
+    <string name="dka_ui_activity_authentification_authscreen_facebooklogin">Masuk Dengan Akun Facebook</string>
+    <string name="dka_ui_activity_authentification_authscreen_chooselanguage">Pilih Bahasa Anda</string>
+    <string name="dka_ui_activity_authentification_authscreen_textAggrement">Dengan Ini Saya Menyetujui Kebijakan
+        Privasi Aplikasi Dan Ketentuan Aplikasi. Serta Syarat Lainnya
+    </string>
+    <string name="dka_ui_activity_authentification_authscreen_buttonlogin_sms">KIRIM KODE OTP</string>
+    <string name="dka_ui_activity_authentification_authscreen_formphonehint">Nomor Ponsel</string>
+
+    <string-array name="dka_account_select_action">
+        <item>Hapus Akun</item>
+    </string-array>
+
+    <string-array name="dka_elekta_example_candidate">
+        <item>Ir. Joko Widodo</item>
+    </string-array>
+</resources>

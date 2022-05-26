@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="DKA.Themes.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <!-- Default Activity Theme. -->
+    <style name="DKA.Themes.NoActionBar.Default" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ms_black_38_opacity</item>
+        <item name="colorPrimaryDark">@color/ms_black</item>
+        <item name="colorAccent">@color/ms_black_87_opacity</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="DKA.Themes.NoActionBar.WindowBar" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ms_black_38_opacity</item>
+        <item name="colorPrimaryDark">@color/ms_black</item>
+        <item name="colorAccent">@color/ms_black_87_opacity</item>
+        <item name="android:windowBackground">@color/ms_black</item>
+        <item name="windowActionBarOverlay">true</item>
+
+    </style>
+
+    <style name="WidgetLoginScreenButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="iconPadding">0dp</item>
+        <item name="backgroundTint">@color/colorWhite</item>
+    </style>
+
+    <style name="WidgesRegisterScreenButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="iconPadding">0dp</item>
+        <item name="backgroundTint">@color/colorWhite</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

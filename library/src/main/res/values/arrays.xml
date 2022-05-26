@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="example_entry_register">LAKI-LAKI
+
+    </string-array>
+    <string-array name="fragment_stepper_login_gendre">
+        <item>LAKI -LAKI</item>
+        <item>PEREMPUAN</item>
+    </string-array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/expandFloatingMenuChat"
+            android:icon="@drawable/assets_framework_material_workspaces"
+            android:iconTint="@color/colorWhite"
+            app:showAsAction="ifRoom"
+            android:title="Menu">
+    </item>
+    <item
+            app:showAsAction="never"
+            android:title="Bersihkan Chat">
+    </item>
+    <item
+            app:showAsAction="never"
+            android:title="Matikan Notifikasi">
+    </item>
+    <item
+            app:showAsAction="never"
+            android:title="Pengaturan Chat">
+
+        <menu>
+            <item
+                    android:title="Blokir">
+            </item>
+
+            <item
+                    android:title="Expor Obrolan">
+            </item>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    app:elevation="0dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/assets_framework_dka"
+                        tools:ignore="VectorDrawableCompat"/>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#00CCCBCB"
+                    app:strokeWidth="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                    <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:tint="@color/colorPrimaryGray"
+                            app:srcCompat="@drawable/ic_search_black_24dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:contentDescription="TODO"/>
+
+                    <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:gravity="left|center_vertical"
+                            android:hint="Cari Sesuatu Di Sini"
+                            android:paddingLeft="16dp"
+                            android:textColor="#000"
+                            android:textSize="16sp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:tabGravity="center"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="#3F51B5"
+                    tools:targetApi="lollipop">
+
+                <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semua"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gambar"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItem2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belanja"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tabItem3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buku"/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/toolbar_dropshadow"/>
+
+            <androidx.core.widget.NestedScrollView
+                    android:id="@+id/mNestedRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mSearchRecyclerSearchEngine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

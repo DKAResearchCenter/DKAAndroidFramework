@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessLeaf">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryBackground">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:layout_collapseMode="pin">
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/menuHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="56dp"
+                                android:background="@null"
+                                android:tint="@color/colorPrimaryGray"
+                                app:srcCompat="@drawable/assets_framework_material_search" />
+
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="56dp"
+                                android:background="@null"
+                                android:tint="@color/colorPrimaryGray"
+                                app:srcCompat="@drawable/assets_framework_material_vert" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toLeftOf="@id/menuHeader"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="0dp"
+                            app:contentPadding="5dp"
+                            android:layout_toStartOf="@id/menuHeader">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@android:color/transparent"
+                                android:hint="Cari Kontak atau Chat Disini"
+                                android:textColorHint="@color/colorPrimaryGray"
+                                android:textSize="12sp" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+</layout>

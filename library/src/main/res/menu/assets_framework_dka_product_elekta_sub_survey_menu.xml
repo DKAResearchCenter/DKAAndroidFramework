@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeSurvey"
+          android:title="Ringkasan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_home"
+          tools:ignore="HardcodedText"/>
+    <!-- <item android:id="@+id/quesionerDataSurvey"
+        android:title="Quisioner"
+        android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_quisionerdata"
+        tools:ignore="HardcodedText" /> -->
+
+    <item android:id="@+id/quesionerSessionSurvey"
+          android:title="Sesi"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_quisionersession"
+          tools:ignore="HardcodedText"/>
+
+    <item android:id="@+id/statsSurvey"
+          android:title="Rilis"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_surveystats"
+          tools:ignore="HardcodedText"/>
+</menu>

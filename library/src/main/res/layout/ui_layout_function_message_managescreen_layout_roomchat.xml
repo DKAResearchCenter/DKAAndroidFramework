@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/mTyperContainer"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
+
+                        <ImageButton
+                                android:id="@+id/imageButton5"
+                                android:layout_width="90dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:tint="@color/colorWhite"
+                                app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mImageMateriaProfilChat"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                    android:id="@+id/mImageMsgLayoutChat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/profile_placeholder"
+                                    app:srcCompat="@drawable/profile_placeholder"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:id="@+id/mNameProfile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama Pengguna"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:id="@+id/mStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp">
+
+                        </View>
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="2dp"
+                                app:contentPadding="8dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxWidth="250dp"
+                                    android:minWidth="10dp"
+                                    android:text="Halo Apa Kabar ? Apa Yang Mau Dilakukan Untuk Mereka Yang"
+                                    android:textColor="#fff"
+                                    app:fontFamily="sans-serif"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardBackgroundColor="#E1DFDF"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="2dp"
+                                app:contentPadding="8dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxWidth="280dp"
+                                    android:text="Halo Apa Kabar ? Apa Yang Mau Dilakukan Untuk Mereka Yang"
+                                    app:fontFamily="sans-serif"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <LinearLayout
+                        android:id="@+id/mLayoutMenuActionBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/mCallButtonChat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:clickable="false"
+                            android:tint="@android:color/white"
+                            android:visibility="visible"
+                            app:backgroundTint="@color/colorPrimary"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/assets_framework_material_call_end"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/mCallVideoButtonChat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:tint="@android:color/white"
+                            app:backgroundTint="@color/colorPrimary"
+                            app:fabSize="mini"
+
+                            app:srcCompat="@drawable/assets_framework_material_videocam"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/mSearchButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:tint="@android:color/white"
+                            app:backgroundTint="@color/colorPrimary"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/assets_framework_material_search"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/mTyperContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@null">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                    <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:foregroundGravity="center"
+                            app:srcCompat="@drawable/assets_framework_material_emotions"/>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textDialog"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="bottom"
+                            android:hint="Ketik Sesuatu"
+                            android:inputType="textMultiLine"
+                            android:maxLines="7"
+                            android:minHeight="56dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="16dp"
+                            android:textColorHint="@color/colorPrimaryGray"
+                            android:textSize="14sp"/>
+
+
+                    <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:foregroundGravity="center"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/assets_framework_material_attach_file"/>
+
+                    <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:foregroundGravity="center"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_send_black_24dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

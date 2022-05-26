@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DKACash">
+        <attr name="DKAMargins" format="dimension" />
+
+        <attr name="DKAMarginLeft" format="dimension" />
+        <attr name="DKAMarginRight" format="dimension" />
+        <attr name="DKAMarginTop" format="dimension" />
+        <attr name="DKAMarginBottom" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DKAAds">
+        <attr name="id" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DKANews">
+        <attr name="android:height" format="dimension" />
+        <attr name="android:width" format="dimension" />
+        <attr name="typeModels" format="enum">
+            <enum name="standard" value="0" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                        android:id="@+id/view11"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/colorPrimaryGray"/>
+
+                <LinearLayout
+                        android:id="@+id/mAddAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp"
+                        tools:targetApi="m">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:padding="5dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/ic_person_add_black_24dp"
+                            android:tint="@color/colorPrimaryGray"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center_vertical"
+                            android:text="Tambahkan Akun Baru"
+                            android:textColor="@color/colorPrimaryGray"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp"
+                        tools:targetApi="m">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:padding="5dp"
+                            android:scaleType="fitStart"
+                            app:srcCompat="@drawable/ic_help_black_24dp"
+                            app:tint="@color/colorPrimaryGray"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center_vertical"
+                            android:text="Bantuan"
+                            android:textColor="@color/colorPrimaryGray"/>
+                </LinearLayout>
+
+                <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

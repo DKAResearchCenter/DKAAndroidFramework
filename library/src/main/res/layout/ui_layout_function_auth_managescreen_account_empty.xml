@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <View
+                    android:id="@+id/view6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"/>
+
+            <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Oppss !"
+                    android:textSize="28sp"
+                    app:fontFamily="casual"/>
+
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Sepertinya Tidak Ada Akun Di Ponsel Anda"
+                    android:textSize="14sp"
+                    app:fontFamily="sans-serif-condensed"/>
+
+            <View
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:src="@drawable/assets_framework_dka_general_flatdesign_secureidentity"
+                    tools:ignore="ContentDescription"/>
+
+            <View
+                    android:id="@+id/view8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mButtonToLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Gunakan Sebuah Akun"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/colorPrimary">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <View
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+            <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Tentang Akun DKA"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"/>
+
+                    <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="3sp"
+                            android:text="@string/dka_ui_activity_authentification_authscreen_welcometitle_desc"
+                            android:textSize="12sp"
+                            app:fontFamily="sans-serif-condensed"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

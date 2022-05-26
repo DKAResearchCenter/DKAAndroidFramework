@@ -1,0 +1,133 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.dkaresearchcenter.dkaframework">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- client -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+            android:usesCleartextTraffic="true"
+            tools:targetApi="m">
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="face, barcode"/>
+        <!-- To use multiple models: android:value="face,model2,model3" -->
+
+        <meta-data
+                android:name="com.google.android.gms.wallet.api.enabled"
+                android:value="true"/>
+
+
+        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Auth.Component.View.DKAAuthLogin"
+                  android:exported="true"
+                  android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
+                  tools:ignore="InnerclassSeparator"/>
+
+        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.MessageManage.DKAMessageManage"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
+                  tools:ignore="InnerclassSeparator"/>
+
+        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.View.DKAMsgScreenCall"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:theme="@style/DKA.Themes.NoActionBar"
+                  tools:ignore="InnerclassSeparator"/>
+
+        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Message.Component.View.DKAMsgScreenRoomChat"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:theme="@style/DKA.Themes.NoActionBar"
+                  tools:ignore="InnerclassSeparator"/>
+
+        <activity android:name="com.dkaresearchcenter.dkaframework.Functions.Auth.Component.AuthManage.DKAAuthManage"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:theme="@style/DKA.Themes.NoActionBar.WindowBar"
+                  tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="yovanggaanandhika.framework.dka.AccountInformation"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!--<provider
+            android:authorities="yovanggaanandhika.framework.dka.datasyncprovider"
+            android:name=".Provider.DKAAuthentificatorProvider"
+            android:exported="false"
+            android:syncable="true"
+            tools:ignore="InnerclassSeparator">
+        </provider>-->
+
+        <service
+                android:name="com.dkaresearchcenter.dkaframework.Service.Component.Auth.DKAAuthentificatorService"
+                android:exported="true"
+                tools:ignore="ExportedService,InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                    android:name="android.accounts.AccountAuthenticator"
+                    android:resource="@xml/dka_auth_accountauthenticator"/>
+        </service>
+        <service
+                android:name="com.dkaresearchcenter.dkaframework.Service.Component.Sync.DKAAuthentificatorSyncService"
+                android:exported="true"
+                android:process=":sync"
+                tools:ignore="ExportedService,InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data
+                    android:name="android.content.SyncAdapter"
+                    android:resource="@xml/dka_auth_syncadapter"/>
+        </service>
+
+        <service
+                android:exported="true"
+                android:label="Layanan DKA"
+                android:icon="@mipmap/ic_launcher"
+                android:name="com.dkaresearchcenter.dkaframework.Service.DKAService"
+                tools:ignore="ExportedService">
+
+        </service>
+
+    </application>
+
+</manifest>
+
+

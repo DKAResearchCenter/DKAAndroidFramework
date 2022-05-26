@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeQuickCount"
+          android:title="Ringkasan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_home"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/AddQuickCount"
+          android:title="Tambah"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_hitungcepat_part_menu_addcounting"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/ResultQuickCount"
+          android:title="Hasil"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_hitungcepat_part_menu_resultcounting"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/StatsQuickCount"
+          android:title="Statistik"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_hitungcepat_part_menu_statscont"
+          tools:ignore="HardcodedText"/>
+</menu>

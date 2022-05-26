@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:background="@color/colorPrimary"/>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Saldo Anda"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorWhite"
+                                app:fontFamily="sans-serif-condensed"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="IDR. 358.400"
+                                android:textColor="#FFF"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                app:fontFamily="sans-serif-black"/>
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:background="@null"
+                                        android:scaleType="fitCenter"
+                                        app:srcCompat="@drawable/assets_framework_dka_product_cash_scan"/>
+
+                                <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Pindai"
+                                        android:textColor="#FFF"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                <ImageButton
+                                        android:id="@+id/imageButton9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:background="@null"
+                                        android:scaleType="fitCenter"
+                                        app:srcCompat="@drawable/assets_framework_dka_product_cash_topup"/>
+
+                                <TextView
+                                        android:id="@+id/textView9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Topup"
+                                        android:textColor="#FFF"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                <ImageButton
+                                        android:id="@+id/imageButton7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:background="@null"
+                                        android:scaleType="fitCenter"
+                                        app:srcCompat="@drawable/assets_framework_dka_product_cash_send"/>
+
+                                <TextView
+                                        android:id="@+id/textView11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Kirim"
+                                        android:textColor="#FFF"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                <ImageButton
+                                        android:id="@+id/imageButton8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:background="@null"
+                                        android:scaleType="fitCenter"
+                                        app:srcCompat="@drawable/assets_framework_dka_product_cash_received"/>
+
+                                <TextView
+                                        android:id="@+id/textView12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Terima"
+                                        android:textColor="#FFF"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                                android:id="@+id/view17"
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"/>
+
+                        <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                            <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        app:cardBackgroundColor="#3949AB"
+                                        app:cardCornerRadius="9dp"
+                                        app:cardElevation="8dp"
+                                        app:contentPadding="10dp">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                        <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                app:srcCompat="@drawable/assets_framework_general_visa"
+                                                app:tint="#fff"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="2382 2833 2118 1223"
+                                                android:textColor="#fff"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                app:fontFamily="serif-monospace"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="10/23"
+                                                android:textColor="#fff"
+                                                android:textStyle="bold"
+                                                app:fontFamily="sans-serif-smallcaps"/>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        app:cardBackgroundColor="#3949AB"
+                                        app:cardCornerRadius="9dp"
+                                        app:cardElevation="8dp"
+                                        app:contentPadding="10dp">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                        <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                app:srcCompat="@drawable/assets_framework_general_visa"
+                                                app:tint="#fff"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="2382 2833 2118 1223"
+                                                android:textColor="#fff"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                app:fontFamily="serif-monospace"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="10/23"
+                                                android:textColor="#fff"
+                                                android:textStyle="bold"
+                                                app:fontFamily="sans-serif-smallcaps"/>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        app:cardBackgroundColor="#3949AB"
+                                        app:cardCornerRadius="9dp"
+                                        app:cardElevation="8dp"
+                                        app:contentPadding="10dp">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                        <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                app:srcCompat="@drawable/assets_framework_general_visa"
+                                                app:tint="#fff"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="2382 2833 2118 1223"
+                                                android:textColor="#fff"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                app:fontFamily="serif-monospace"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="10dp"/>
+
+                                        <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="10/23"
+                                                android:textColor="#fff"
+                                                android:textStyle="bold"
+                                                app:fontFamily="sans-serif-smallcaps"/>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

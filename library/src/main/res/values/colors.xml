@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icLauncher">#fff</color>
+    <color name="colorPrimary">#2A9ABF</color>
+
+    <color name="colorPrimaryBlue">#2A9ABF</color>
+
+    <color name="colorPrimaryPink">#FAC3C3</color>
+
+    <color name="colorPrimaryGray">#ACA7A7</color>
+    <color name="colorPrimaryBackground">#FFFFFF</color>
+
+    <color name="colorPrimaryDark">#1C6780</color>
+    <color name="colorAccent">#0E3340</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorHeadline">#515050</color>
+
+    <color name="buttonColorGreen">#068434</color>
+    <color name="buttonColorOrange">#FF9800</color>
+    <color name="backgroundIconColor">#868A8D</color>
+    <color name="colorError">@color/colorWhite</color>
+    <color name="BackgroundcolorError">#B10720</color>
+    <color name="textColorHighlight">@color/colorPrimaryDark</color>
+    <color name="textColor">#000</color>
+    <color name="buttonBackgroundSosmedColor">#EDF5F4F4</color>
+    <color name="buttonBackgroundSMSColor">#05700B</color>
+    <color name="colorInvertDarkNight">#fff</color>
+    <color name="colorInvertDarkNightText">#868A8D</color>
+    <color name="colorRegisterBackBackground">#1C6780</color>
+    <color name="colorRegisterBackText">@color/colorWhite</color>
+</resources>

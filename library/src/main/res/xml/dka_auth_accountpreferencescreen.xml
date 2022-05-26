@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+            android:key="akun"
+            android:summary="Informasi, Privasi, Keamanan dan Pengaturan"
+            android:title="Informasi Akun">
+        <intent android:action="yovanggaanandhika.framework.dka.AccountInformation"/>
+    </PreferenceScreen>
+</PreferenceScreen>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/assets_framework_dka_product_chat_selector_callscreen">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Yovangga Anandhika"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Menghubungkan ..."
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_placeholder"
+                    app:civ_border_color="#FF000000"/>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+            <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:columnCount="3"
+                    app:rowCount="3">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_mic_off"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_group_add"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_campaign"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_videocam"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:id="@+id/floatingActionButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_rec"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                        android:id="@+id/floatingActionButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:clickable="true"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:srcCompat="@drawable/assets_framework_material_security"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                    android:id="@+id/floatingActionButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:clickable="true"
+                    android:tint="@color/colorWhite"
+                    app:backgroundTint="#880404"
+                    app:fabCustomSize="80dp"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/assets_framework_material_call_end"/>
+
+
+        </LinearLayout>
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:clickable="true"
+                android:tint="@color/colorWhite"
+                app:elevation="8dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+
+        <com.ebanx.swipebtn.SwipeButton
+                android:id="@+id/swipe_btn"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:button_background="@drawable/shape_button"
+                app:button_bottom_padding="10dp"
+                app:button_image_disabled="@drawable/ic_lock_black_24dp"
+                app:button_image_enabled="@drawable/ic_ads_logo"
+                app:button_image_height="40dp"
+                app:button_image_width="40dp"
+                app:button_left_padding="10dp"
+                app:button_right_padding="10dp"
+                app:button_top_padding="10dp"
+                app:has_activate_state="true"
+                app:initial_state="disabled"
+                app:inner_text="Beralih Video"
+                app:inner_text_background="@drawable/shape_rounded"
+                app:inner_text_bottom_padding="5dp"
+                app:inner_text_color="@android:color/white"
+                app:inner_text_size="12sp"
+                app:inner_text_top_padding="5dp"/>
+    </RelativeLayout>
+</layout>

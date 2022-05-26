@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeCampaign"
+          android:title="Ringkasan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_home"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/SMSCampaign"
+          android:title="SMS Bom"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_kampanye_part_menu_sms"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/SosmedCampaign"
+          android:title="Sosial Media"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_kampanye_part_menu_sosmed"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/HumanCampaign"
+          android:title="Perbincangan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_kampanye_part_menu_human"
+          tools:ignore="HardcodedText"/>
+</menu>

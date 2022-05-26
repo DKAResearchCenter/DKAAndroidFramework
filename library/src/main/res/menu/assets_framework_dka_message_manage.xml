@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:id="@+id/mIntegration"
+          android:title="Integrasi"
+          android:icon="@drawable/assets_framework_material_workspaces"
+          tools:ignore="HardcodedText"/>
+
+    <item android:id="@+id/mMsgSystem"
+        android:title="Chat"
+        android:icon="@drawable/assets_framework_material_chat"
+        tools:ignore="HardcodedText"/>
+
+    <item android:id="@+id/mGroup"
+        android:title="Grup"
+        android:icon="@drawable/assets_framework_material_group_add"
+        tools:ignore="HardcodedText"/>
+
+    <item android:id="@+id/mCall"
+        android:title="Panggilan"
+        android:icon="@drawable/assets_framework_material_call"
+        tools:ignore="HardcodedText"/>
+
+    <item android:id="@+id/mAccountBadge"
+        android:title="Akun"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        tools:ignore="HardcodedText"/>
+
+</menu>

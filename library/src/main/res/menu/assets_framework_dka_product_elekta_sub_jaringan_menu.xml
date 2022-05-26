@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeNetwork"
+          android:title="Ringkasan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_survey_part_menu_home"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/ScheduleNetwork"
+          android:title="Agenda"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_jaringan_part_menu_schedule"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/AttrNetwork"
+          android:title="Attribut"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_jaringan_part_menu_attribut"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/AttrKTP"
+          android:title="KTP"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_jaringan_part_menu_ktp"
+          tools:ignore="HardcodedText"/>
+    <item android:id="@+id/CheaterNetwork"
+          android:title="Kecurangan"
+          android:icon="@drawable/assets_framework_dka_product_elekta_sub_jaringan_part_menu_cheatreport"
+          tools:ignore="HardcodedText"/>
+</menu>
