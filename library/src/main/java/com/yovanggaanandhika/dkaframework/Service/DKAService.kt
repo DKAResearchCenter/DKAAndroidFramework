@@ -17,6 +17,7 @@ import com.google.android.gms.location.*
 import github.nisrulz.easydeviceinfo.base.EasyBatteryMod
 import github.nisrulz.easydeviceinfo.base.EasyDeviceMod
 import io.socket.client.IO
+import com.yovanggaanandhika.dkaframework.R
 import io.socket.client.Socket
 import org.json.JSONObject
 import java.net.URISyntaxException

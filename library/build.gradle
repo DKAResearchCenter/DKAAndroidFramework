@@ -3,20 +3,26 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'maven-publish'
+    id 'maven-publish' apply(true)
+    id 'signing' apply(true)
 }
+
+group = "com.yovanggaanandhika.dkaframework"
+version = "1.0.0"
 
 android {
 
     publishing {
-        singleVariant('release') {
-            withSourcesJar()
-            withJavadocJar()
+        publishing {
+            singleVariant('release') {
+                withSourcesJar()
+                withJavadocJar()
+            }
         }
-        // ...
     }
 
     compileSdkVersion 32
+
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
     }
@@ -34,6 +40,10 @@ android {
     }
 
     defaultConfig {
+        aarMetadata {
+            minCompileSdk = 14
+        }
+
         minSdkVersion 14
         targetSdkVersion 32
         versionCode 1
@@ -51,10 +61,10 @@ android {
         release {
             zipAlignEnabled true /** Packing To Zip Align Production **/
             minifyEnabled true /** Enable Compress Android Applications **/
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+/*            shrinkResources true*/
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        debug {
-
         }
     }
 
@@ -62,7 +72,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.20"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.21"
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.10"
     implementation 'com.google.android.material:material:1.6.0'
 
@@ -102,7 +112,6 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'com.tomash:androidcontacts:1.14.0'
-    implementation 'com.github.Jagerfield:Mobile-Contacts-Library:v1.7'
     implementation 'com.pixplicity.easyprefs:library:1.9.0'
     implementation ('io.socket:socket.io-client:2.0.1') {
         //noinspection DuplicatePlatformClasses
@@ -160,15 +169,27 @@ dependencies {
 
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = "com.yovanggaanandhika.dkaframework"
+            artifactId = 'library'
+            version = '1.0.0'
+            // getComponent Release
+            afterEvaluate {
                 from components.release
-                groupId = "com.yovanggaanandhika"
-                artifactId = "dkaframework"
-                version = "1.0.0"
             }
+        }
+    }
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {  //only for users registered in Sonatype after 24 Feb 2021
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            username = "yovangga"
+            password = "@Cyberhack2010"
         }
     }
 }
